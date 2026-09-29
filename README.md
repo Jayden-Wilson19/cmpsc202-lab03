@@ -8,12 +8,12 @@ This lab focuses on understanding and analyzing the asymptotic behavior of algor
 
 Suppose $T(n)$ is the worst case running time of an algorithm with input size $n$, and we know that $T(n)$ is $\mathcal{O}(n^3)$ and $\Omega(n^2)$. For each of the following statements, determine whether it must be true, must be false, or could be either true or false. Give a brief justification for each. 
 
-1. $T(n)$ is $\mathcal{O}(n^2)$.
-2. $T(n)$ is $\Theta(n^3)$.
-3. $T(n)$ is $\Omega(n)$.
-4. $T(n)$ is $\Theta(n^{1.5})$.
-5. $T(n)$ is $\mathcal{O}(n)$.
-6. $T(n)$ is $\Theta(n^2 \log n)$.
+1. $T(n)$ is $\mathcal{O}(n^2)$. Could be either. Could be Θ(n^2) which is the same as O(n^2). It could also be Θ(n^3) which is not the same as O(n^2).
+2. $T(n)$ is $\Theta(n^3)$. Could be either. O(n^3) allows to include Θ(n^3), however it is not required.
+3. $T(n)$ is $\Omega(n)$. Must be true. Since T(n) = Ω(n^2) and n^2 grows faster than n, this statement is true.
+4. $T(n)$ is $\Theta(n^{1.5})$. Must be false. The lower bound is n^2. Θ(n^1.5) is not Ω(n^2) since it goes slower than the lower bound.
+5. $T(n)$ is $\mathcal{O}(n)$. Must be false. Since n grows slower than n^2, T(n) = O(n) cannot also be Ω(n^2).
+6. $T(n)$ is $\Theta(n^2 \log n)$. Could be either. n^2logn is normally shown between n^2 and n^3. It satisfies both lower and upper bound.
 
 
 ## Problem 2
