@@ -27,7 +27,9 @@ Output: int sum
     sum = 0
     for i = 1 to n:
         for j = 1 to n:
-            sum += f(A, i, j)
+            sum += f(A, i, j) <- called n^2 in total
 ```
 
 Without knowing anything about $f$, what can we say about the running time of the Mystery Algorithm in terms of $n$? Justify your answer. 
+
+The algorithm calls to f n^2 times in total, easily telling us that the running time is Θ(n^2Tf(n)), where as Tf(n) is the running time for f. Since we have no more given information about f there is no other bound we can determine.
